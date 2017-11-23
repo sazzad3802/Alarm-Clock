@@ -16,13 +16,13 @@ if os.path.isfile("YT.txt") == False:
 	print "ERROR: YT.txt file not present. Creating file..."
 	flags = os.O_CREAT | os.O_EXCL | os.O_WRONLY
 	filecreate = os.open("YT.txt", flags)
-	with os.fdopen(fisierCreat, 'w') as fileCreated:
+	with os.fdopen(filecreate, 'w') as fileCreated:
 	    fileCreated.write("https://youtu.be/BZg8BhBWyo8")
 
 #The User can set the time they want to wake up. The String the user puts in must be the same as the example to work.
 print "What time do you want to wake up?"
 print "Use this form.\nExample: 06:30"
-Alarm = raw_input("> ")
+Alarm = input("> ")
 
 
 #I first need to state the Time variable so it's usable in the while-loop
